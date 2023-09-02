@@ -40,11 +40,11 @@ const productList = [
 
 const Products = () => {
   return (
-    <div className="products">
+    <div className="products" id="products">
       <h1>OUR ASSORTMENT</h1>
       <div className="products-list">
         {productList.map((obj, index) => (
-          <div className="product-card">
+          <div className="product-card" key={index}>
             <img
               className="img-responsive"
               src={obj.img}
@@ -53,7 +53,7 @@ const Products = () => {
             <div className="product-card-information">
               <div className="information">
                 <h3>{obj.title}</h3>
-                <h2>{obj.price}$</h2>
+                <h2 className="price">{obj.price}$</h2>
               </div>
               <button>+</button>
             </div>
