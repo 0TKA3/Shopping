@@ -42,18 +42,30 @@ body {
     margin: 0 auto;
 }
 
+main {
+    margin-top: 100px;
+}
 
 .navbar {
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 62px;
-    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 56px;
+    background-color: white;
+    z-index: 2;
 
 
     .nav-brand {
         h1 {
+            cursor: pointer;
+            margin-left: 140px;
             color: $black;
             font-size: 40px;
             font-weight: 900;
@@ -62,12 +74,21 @@ body {
     }
 
     .nav-items {
+        margin-right: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         a {
             color: #242323;
             font-size: 22px;
             font-weight: 500;
             letter-spacing: 0.22px;
             margin-right: 65px;
+        }
+        .cart-image {
+            width: 36px;
+            height: 36px;
+            margin-top: 5px;
         }
     }
 }

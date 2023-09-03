@@ -3,7 +3,7 @@ import Products from "./Products";
 import Community from "./Community";
 
 
-const Main = () => {
+const Main = ({cartProducts, setCartProducts}) => {
   return (
     <main>
       <div className="container">
@@ -11,7 +11,7 @@ const Main = () => {
       </div>
       <Brands></Brands>
       <div className="container">
-        <Products></Products>
+        <Products cartProducts={cartProducts} setCartProducts={setCartProducts}></Products>
         <div className="second-banner" id="sales"></div>
       </div>
       <Community></Community>

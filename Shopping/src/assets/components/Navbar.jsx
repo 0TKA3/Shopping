@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import emptyCart from '../images/icons/emptyCart.svg'
 
-const Navbar = () => {
+const Navbar = ({cartProducts}) => {
+
   return (
     <>
       <nav className="navbar">
@@ -11,7 +14,7 @@ const Navbar = () => {
           <Link to="/">HOME</Link>
           <a href="#products">CATALOGUE</a>
           <a href="#sales">SALES</a>
-          <Link to="../../cart">CART</Link>
+          <Link to="../../cart"><img className='cart-image' src={emptyCart} alt="#" /></Link>
         </div>
       </nav>
     </>
