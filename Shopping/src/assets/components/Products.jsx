@@ -4,6 +4,7 @@ import prod3 from "../images/products/3.png";
 import prod4 from "../images/products/4.png";
 import prod5 from "../images/products/5.png";
 import prod6 from "../images/products/6.png";
+import { useState } from "react";
 
 const productList = [
   {
