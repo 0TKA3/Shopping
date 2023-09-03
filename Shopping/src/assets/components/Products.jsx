@@ -40,16 +40,7 @@ const productList = [
 
 
 
-const Products = ({cartProducts, setCartProducts}) => {
-
-  function addToCartHandler(event) {
-
-    let newItem = {
-      
-    }
-
-    setCartProducts()
-  }
+const Products = () => {
 
   return (
     <div className="products" id="products">
@@ -67,7 +58,7 @@ const Products = ({cartProducts, setCartProducts}) => {
                 <h3>{obj.title}</h3>
                 <h2 className="price">{obj.price}$</h2>
               </div>
-              <button onClick={addToCartHandler}>+</button>
+              <button>+</button>
             </div>
           </div>
         ))}

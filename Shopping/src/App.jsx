@@ -8,16 +8,15 @@ import Footer from './assets/components/Footer';
 
 function App() {
 
-  let [cartProducts, setCartProducts] = useState([])
 
   return (
     <Router>
       <div className="container">
-        <Navbar cartProducts={cartProducts}/>
+        <Navbar/>
         </div>
         <Routes>
-          <Route path="/cart" element={<Cart cartProducts={cartProducts}/>} />
-          <Route path='/' element={<Main cartProducts={cartProducts} setCartProducts={setCartProducts}/>} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path='/' element={<Main/>} />
         </Routes>
         <Footer />
     </Router>

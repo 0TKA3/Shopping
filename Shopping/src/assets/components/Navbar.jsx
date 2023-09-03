@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import emptyCart from '../images/icons/emptyCart.svg'
 
-const Navbar = ({cartProducts}) => {
+const Navbar = () => {
 
   return (
     <>
