@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Cart = ({cartItems, setCartItems}) => {
 
-
     let total = 0
     function totalPrice(obj) {
         total = total + Number(obj)

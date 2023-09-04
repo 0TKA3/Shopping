@@ -18,8 +18,11 @@ const Navbar = ({cartItems={cartItems}}) => {
           <Link to="/">HOME</Link>
           <a href="#products">CATALOGUE</a>
           <a href="#sales">SALES</a>
-          <Link to="../../cart"><img className='cart-image' src={emptyCart} alt="#" /></Link>
-          <p>{cartCount}</p>
+          <div className="nav-cart-item">
+            <Link to="../../cart"><img className='cart-image' src={emptyCart} alt="#" /></Link>
+            <p>{cartCount}</p>
+          </div>
+          
         </div>
       </nav>
     </>
