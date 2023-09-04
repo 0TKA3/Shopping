@@ -393,3 +393,15 @@ main {
         font-weight: normal;
     }
 }
+.nav-cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    a {
+        margin-right: 10px !important;
+    }
+    p {
+        font-size: 22px;
+    }
+}
