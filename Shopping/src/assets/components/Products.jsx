@@ -11,37 +11,60 @@ const productList = [
     img: prod1,
     title: "Hoodie",
     price: "29",
+    id: 1
   },
   {
     img: prod2,
     title: "Jacket",
     price: "49",
+    id: 2
   },
   {
     img: prod3,
     title: "T-Shirt",
     price: "13",
+    id: 3
   },
   {
     img: prod4,
     title: "T-Shirt",
     price: "25",
+    id: 4
   },
   {
     img: prod5,
     title: "Pullover",
     price: "64",
+    id: 5
   },
   {
     img: prod6,
     title: "Suit",
     price: "74",
+    id: 6
   },
 ];
 
 
 
-const Products = () => {
+const Products = ({cartItems, setCartItems}) => {
+
+  function prodFinder(event) {
+    const index = parseInt(event.target.dataset.index);
+    let currentItem = productList.find((obj) => obj.id === index);
+    let isAdded = false
+    cartItems.forEach((element) => {
+      if(element.id == currentItem.id) {
+        isAdded = true
+      }
+    })
+    if(isAdded === false) {
+      setCartItems([...cartItems, currentItem])
+    }
+    
+}
+
+
 
   return (
     <div className="products" id="products">
@@ -59,7 +82,7 @@ const Products = () => {
                 <h3>{obj.title}</h3>
                 <h2 className="price">{obj.price}$</h2>
               </div>
-              <button>+</button>
+              <button onClick={prodFinder} data-index={obj.id}>+</button>
             </div>
           </div>
         ))}

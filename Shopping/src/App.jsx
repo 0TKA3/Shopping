@@ -6,17 +6,21 @@ import Navbar from './assets/components/Navbar';
 import Main from './assets/components/Main';
 import Footer from './assets/components/Footer';
 
-function App() {
 
+
+
+function App() {
+  
+  let [cartItems, setCartItems] = useState([])
 
   return (
     <Router>
       <div className="container">
-        <Navbar/>
+        <Navbar cartItems={cartItems}/>
         </div>
         <Routes>
-          <Route path="/cart" element={<Cart/>} />
-          <Route path='/' element={<Main/>} />
+          <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>} />
+          <Route path='/' element={<Main cartItems={cartItems} setCartItems={setCartItems}/>} />
         </Routes>
         <Footer />
     </Router>
