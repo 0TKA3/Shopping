@@ -55,15 +55,15 @@ const Cart = ({cartItems, setCartItems}) => {
         <div className="cart-items">
             <div className="cart-items-item">
                 {cartItems.map((obj, index) => (
-                    <>
+                    <div className="cart-items-item-element">
                         <p>{obj.title}  {obj.price}$</p>
-                    </>
+                    </div>
                 ))}
             </div>
         </div>
        
         <div className="total">
-            <h3>Total:{total}$</h3>
+            <h3>Total:  {total}$</h3>
         </div>
         
       </div>
