@@ -60,7 +60,8 @@ const Products = ({cartItems, setCartItems}) => {
     })
     if(isAdded === false) {
       setCartItems([...cartItems, currentItem])
-      return localStorage.setItem('storageCart', JSON.stringify(cartItems))
+      const newList = [...cartItems, currentItem]
+      localStorage.setItem('storageCart', JSON.stringify(newList))
     }
     
      

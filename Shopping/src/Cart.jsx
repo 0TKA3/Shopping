@@ -17,6 +17,7 @@ const Cart = ({cartItems, setCartItems}) => {
             }
         })
         setCartItems(newList)
+        localStorage.setItem('storageCart', JSON.stringify(newList))
     }
 
 
@@ -55,7 +56,7 @@ const Cart = ({cartItems, setCartItems}) => {
         <div className="cart-items">
             <div className="cart-items-item">
                 {cartItems.map((obj, index) => (
-                    <div className="cart-items-item-element">
+                    <div className="cart-items-item-element" key={obj.id}>
                         <p>{obj.title}  {obj.price}$</p>
                     </div>
                 ))}

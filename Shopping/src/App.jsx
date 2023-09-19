@@ -11,7 +11,7 @@ import Footer from './assets/components/Footer';
 
 function App() {
   
-  let [cartItems, setCartItems] = useState([])
+  let [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('storageCart')) || [])
 
   return (
     <Router>
