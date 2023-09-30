@@ -4,7 +4,6 @@ import prod3 from "../images/products/3.png";
 import prod4 from "../images/products/4.png";
 import prod5 from "../images/products/5.png";
 import prod6 from "../images/products/6.png";
-import { useState } from "react";
 
 const productList = [
   {
@@ -21,13 +20,13 @@ const productList = [
   },
   {
     img: prod3,
-    title: "T-Shirt",
+    title: "T-Shirt + Sunglasses",
     price: "13",
     id: 3
   },
   {
     img: prod4,
-    title: "T-Shirt",
+    title: "Breeches",
     price: "25",
     id: 4
   },
@@ -62,6 +61,8 @@ const Products = ({cartItems, setCartItems}) => {
       setCartItems([...cartItems, currentItem])
       const newList = [...cartItems, currentItem]
       localStorage.setItem('storageCart', JSON.stringify(newList))
+    } else {
+      alert('This product is already in cart')
     }
     
      

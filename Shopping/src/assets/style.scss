@@ -214,10 +214,11 @@ main {
         margin-right: 10px;
         border-radius: 15px;
         background-color: #253237;
-        color: $white;
+        color: white;
         outline: none;
         font-size: 24px;
         cursor: pointer;
+        box-shadow: 0px 0px 37px 0px rgba(34, 60, 80, 0.07);
         &:hover {
             background-color: #1a2427;
         }
@@ -332,18 +333,20 @@ main {
 .cart-container {
     display: flex;
     justify-content: flex-start;
-    min-height: 74vh;
+    min-height: 73.2vh;
+    background-color: #f7f8f9;
 }
 
 .cart-product-card {
     padding: 10px;
     width: 240px;
-    height: 400px;
+    max-height: 450px;
     margin: 50px;
     margin-top: 0px;
-    background-color: #f3f3f3;
+    background-color: white;
     border-radius: 25px;
     margin-right: 25px;
+    box-shadow: 0px 0px 37px 0px rgba(34, 60, 80, 0.1);
 }
 
 .cart-prod-list {
@@ -365,27 +368,34 @@ main {
 }
 
 .cart-information {
+    position: sticky;
+    top: 120px;
+    right: 25px;
     display: flex;
-    min-height: 200px;
-    max-height: auto;
+    height: 180px;
     width: 25%;
     flex-direction: column;
-    align-items: center;
-    border-left: 4px solid #ededed;
-    padding: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 20px;
     h1 {
         font-weight: normal;
     }
-    margin-bottom: 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 37px 0px rgba(34, 60, 80, 0.07);
 }
 
 .total {
-    margin-top: 30px;
-    background-color: rgb(29, 182, 29);
+    margin: 0 auto;
+    width: 25%;
+    text-align: center;
     padding: 10px;
     border-radius: 5px;
     h3{ 
         font-weight: 500;
+        color: black;
+        font-size: 24px;
     }
 }
 
@@ -419,4 +429,20 @@ main {
 .cart-items {
     height: auto;
     display: flex;
+}
+
+.to-order {
+
+    width: 100%;
+    button {
+        cursor: pointer;
+        background-color: #005bff;
+        height: 60px;
+        width: 100%;
+        border-radius: 10px;
+        font-family: Poppins;
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+    }
 }
