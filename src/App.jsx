@@ -20,7 +20,7 @@ function App() {
         </div>
         <Routes>
           <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>} />
-          <Route path='/' element={<Main cartItems={cartItems} setCartItems={setCartItems}/>} />
+          <Route path='/shopping/' element={<Main cartItems={cartItems} setCartItems={setCartItems}/>} />
         </Routes>
         <Footer />
     </Router>
