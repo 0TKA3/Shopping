@@ -1,4 +1,5 @@
 import { useState } from "react";
+import trashBinIcon from '../src/assets/images/icons/trash-bin.png'
 
 const Cart = ({ cartItems, setCartItems }) => {
   let total = 0;
@@ -52,7 +53,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                       onClick={deleteItem}
                     >
                       <img
-                        src="src/assets/images/icons/trash-bin.png"
+                        src={trashBinIcon}
                         alt="delete"
                         className="cart-delete"
                       />
