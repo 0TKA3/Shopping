@@ -19,7 +19,7 @@ function App() {
         <Navbar cartItems={cartItems}/>
         </div>
         <Routes>
-          <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>} />
+          <Route path="/shopping/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>} />
           <Route path='/shopping/' element={<Main cartItems={cartItems} setCartItems={setCartItems}/>} />
         </Routes>
         <Footer />

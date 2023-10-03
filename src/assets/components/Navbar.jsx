@@ -16,7 +16,7 @@ const Navbar = ({cartItems={cartItems}}) => {
           <Link to="/shopping/"onClick={()=> scrollTo(0, 750)}>CATALOGUE</Link>
           <Link to="/shopping"onClick={()=> scrollTo(0, 2500)}>SALES</Link>
           <div className="nav-cart-item">
-            <Link to="/cart"><img className='cart-image' src={emptyCart} alt="#" /></Link>
+            <Link to="/shopping/cart"><img className='cart-image' src={emptyCart} alt="#" /></Link>
             <p>{cartItems.length}</p>
           </div>
         </div>
